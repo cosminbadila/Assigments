@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program pentru efectuarea operațiilor aritmetice de bază</title>
+    <style>
+        h1{
+            border-bottom: 2px solid rgb(78, 149, 168);
+            text-align: center;
+            color: brown;
+            font-family: 'Times New Roman', Times, serif;
+            width: 90%;
+            margin-left: 5%;
+        }
+        div {
+            color: rgb(104, 9, 9);
+            margin-top: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Program pentru efectuarea operațiilor aritmetice de bază</h1>
+<div>
+    <script>
+        function inmultire(x, y){
+            return x*y;
+        }
+        
+        function adunare(x,y){
+            return x+y;
+        }
+        
+        function scadere(x, y){
+            
+            return x-y;           
+        }
+
+        function impartire(x, y){
+           
+            return x/y;
+                      
+        }
+
+        let x= eval(prompt('primul numar este :' ));
+        let operatie =prompt('selectati operatia: + , - , * , / ');
+        let y= eval(prompt('al doilea numar este :' ));
+
+        if(operatie=='+'){
+            document.write('Rezultatul adunarii este: ', adunare(x,y))
+        }
+        if(operatie=='-'){
+            document.write('Rezultatul scaderii este: ', scadere(x,y))
+        }
+        if(operatie=='*'){
+            document.write('Rezultatul inmultirii este: ', inmultire(x,y))
+        }
+        if(operatie=='/'){
+            document.write('Rezultatul impartirii este: ', impartire(x,y))
+        }
+    </script>
+ </div>
+    
+</body>
+</html>
