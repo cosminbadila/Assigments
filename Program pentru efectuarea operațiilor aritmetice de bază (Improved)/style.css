@@ -1,0 +1,43 @@
+h1{
+    border-bottom: 2px solid rgb(78, 149, 168);
+    text-align: center;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    width: 90%;
+    margin-left: 5%;
+}
+body{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#rezultatul{
+    color: rgb(223, 21, 55);
+}
+input {
+    padding: 10px 10px;
+    margin-left: 25px;
+    text-align: center;
+    display: inline-block;
+    width: 185px;
+    height: 15px;
+    font-size: 20px;
+} 
+select{
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 210px;
+    height: 40px;
+    margin-left: 25px;
+    color: gray;
+}
+button{
+font-size: 20px;
+padding: 10px;
+margin-left: 30px;
+border-radius: 10px;
+}

@@ -49,18 +49,43 @@
         let operatie =prompt('selectati operatia: + , - , * , / ');
         let y= eval(prompt('al doilea numar este :' ));
 
-        if(operatie=='+'){
-            document.write('Rezultatul adunarii este: ', adunare(x,y))
+        switch(operatie){
+            case   operatie='+':
+                document.write('Rezultatul adunarii este: ', adunare(x,y));
+                break;
+
+            case  operatie= '-':
+                document.write('Rezultatul scaderii este: ', scadere(x,y));
+                break;
+            case operatie= '*':
+                document.write('Rezultatul inmultirii este: ', inmultire(x,y));
+                break;
+            case operatie= '/' :
+                document.write('Rezultatul impartirii este: ', impartire(x,y));
+                break;
+            default:
+                document.write('Operatia nu este identificata');
+                break;
+
+
+
         }
-        if(operatie=='-'){
-            document.write('Rezultatul scaderii este: ', scadere(x,y))
-        }
-        if(operatie=='*'){
-            document.write('Rezultatul inmultirii este: ', inmultire(x,y))
-        }
-        if(operatie=='/'){
-            document.write('Rezultatul impartirii este: ', impartire(x,y))
-        }
+
+        // if(operatie=='+'){
+        //     document.write('Rezultatul adunarii este: ', adunare(x,y));
+        // }
+        // else if(operatie=='-'){
+        //     document.write('Rezultatul scaderii este: ', scadere(x,y));
+        // }
+        // else if(operatie=='*'){
+        //     document.write('Rezultatul inmultirii este: ', inmultire(x,y));
+        // }
+        // else if{
+        //     document.write('Rezultatul impartirii este: ', impartire(x,y));
+        // }
+        //else{
+        //     document.write('Operatia nu este identificata');
+        //}
     </script>
  </div>
     
