@@ -1,0 +1,48 @@
+
+
+.main {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 240px));
+  row-gap: 40px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    background: rgb(113, 113, 206);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(87, 50, 149, 0.8);
+  }
+  
+  .container {
+    padding: 2px;
+    height: 60px;
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  img{
+    width: 200px;
+    height: 180px;
+    border-radius: 8px;
+  }
+
+p, h1{
+  margin: 15px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+  
+  
+  
