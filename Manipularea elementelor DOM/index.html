@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 - Website Building</title>
+        <style>
+            body {
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            #container {
+                width: 460px;
+                margin: 0 auto;
+            }
+
+            form label,
+            form input,
+            form button {
+                width: 400px;
+                box-sizing: border-box;
+            }
+
+            form input,
+            form button {
+                padding: 8px;
+            }
+
+            form label,
+            form button {
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            form div {
+                margin: 16px 0px;
+            }
+
+            .form-control i{
+                position: absolute;
+                margin-left: 5px;
+                margin-top: 10px;
+                visibility: hidden;
+            }
+            .form-control small{
+                visibility: hidden;
+            }
+            .form-control.success small{
+                visibility: visible;
+                color: green;
+            }
+            .form-control.error small{
+                visibility: visible;
+                color: red;
+            }
+            .form-control.success input{
+                border-color: green;
+            }
+            .form-control.error input{
+                border-color: red;
+            }
+            .form-control.success i.fa-check-circle{
+                visibility: visible;
+                color: green;
+            }
+            .form-control.error i.fa-exclamation-circle{
+                visibility: visible;
+                color: red;
+            }
+
+        </style>
+
+        <script src="https://kit.fontawesome.com/1afbfb0e53.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <form class="form" id="form">
+                <div class="form-control ">
+                    <label for="username">Username:</label>
+                    <input id="username" type="text" placeholder="new_user">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i><br>
+                    <small>Message</small>
+                </div>
+
+                <div class="form-control ">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" placeholder="123456789">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i><br>
+                    <small>Message</small>
+                </div>
+                <button>Submit</button>
+                
+            </form>
+
+        </div>
+        <script>
+            const form = document.getElementById('form');
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+
+            form.addEventListener('submit',(e) =>{
+                e.preventDefault();
+
+                checkInputs();
+            });
+
+            function checkInputs(){
+                const usernameValue = username.value.trim();
+                const passwordValue = password.value.trim();
+
+                if(usernameValue==='new_user'){
+                    setSuccessFor(username, 'Success')
+                }
+                else if(usernameValue===''){
+                    setErrorFor(username, 'Please enter a username')
+                }
+                else{
+                    setErrorFor(username, 'Username is incorect')
+                };
+
+
+                if(passwordValue==='123456789'){
+                    setSuccessFor(password, 'Success')
+                }
+                else if(passwordValue===''){
+                    setErrorFor(password, 'Please enter a password')
+                }
+                else{
+                    setErrorFor(password, 'Password is incorect')
+                };
+                
+            }
+            function setSuccessFor(input, message){
+                const formControl=input.parentElement;
+                const small = formControl.querySelector('small');
+
+                small.innerText = message;
+
+                formControl.className = 'form-control success';
+
+            }
+            function setErrorFor(input, message){
+                const formControl=input.parentElement;
+                const small = formControl.querySelector('small');
+
+                small.innerText = message;
+
+                formControl.className = 'form-control error';
+            }
+
+
+            
+            
+
+        </script>
+    </body>
+</html>
