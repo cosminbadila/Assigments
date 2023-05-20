@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            #my-text-area {
+                display: block;
+                width: 100%;
+                margin-top: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="get-text-btn">Get Data</button>
+        <textarea id="my-text-area" rows="20"></textarea>
+        <script>
+            let button = document.getElementById("get-text-btn");
+            let textArea = document.getElementById("my-text-area");
+            button.addEventListener("click", function () {
+                getData();
+            });
+            async function getData() {
+                try {
+                    let response = await fetch('https://v-dresevic.github.io/Advanced-JavaScript-Programming/data/students.txt');
+                    if (response.status !== 200) {
+                        throw new Error("Error while reading file.");
+                    }
+                    let text = await response.text();
+                    textArea.innerHTML = text;
+                } catch (err) {
+                    textArea.innerHTML = 'Fetch problem: ' + err.message;
+                } finally {
+                    loader.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

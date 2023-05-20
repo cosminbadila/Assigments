@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sablon pentru crearea de obiecte student</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, adress, phone, course) {
+                this.name = name;
+                this.adress = adress;
+                this.phone = phone;
+                this.course = course;
+            }
+            getInfo() {
+                return  "Name: " + this.name + ", " +
+                        "Adress: " + this.adress + ", " +
+                        "Phone: " + this.phone + ", " +
+                        "Course: " + this.course
+            }
+        }
+
+
+
+        var Student1 = new Student("John Andrew", "Str.Avenue no.7", "0566600333", "Biology");
+        var Student2 = new Student("Peterson Aria", "Str.Heroes no.28", "0234500022", "Chemestry");
+        var Student3 = new Student("James Mathew", "Str.QueenElizabeth no.4", "0777700555", "English");
+
+        console.log(Student1.getInfo());
+
+        console.log(Student2.getInfo());
+
+        console.log(Student3.getInfo());
+
+    </script>
+</body>
+
+</html>
